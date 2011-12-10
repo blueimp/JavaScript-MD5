@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!--
+/*
+ * JavaScript MD5 Demo 1.0
+ * https://github.com/blueimp/JavaScript-MD5
+ *
+ * Copyright 2011, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://creativecommons.org/licenses/MIT/
+ */
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript MD5 Demo</title>
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+<style type="text/css">
+.page-header {
+    background-color: #f5f5f5;
+    padding: 80px 20px 10px;
+    margin: 0 -20px 20px;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 0 0 6px 6px;
+       -moz-border-radius: 0 0 6px 6px;
+            border-radius: 0 0 6px 6px;
+}
+</style>
+<!--[if lt IE 7]>
+<style type="text/css">
+.span10, .span6 {
+    display: inline;
+    float: left;
+    margin-left: 20px;
+}
+.topbar {
+    position: absolute;
+}
+.topbar ul, .topbar .container {
+    padding-top: 10px;
+}
+.topbar li {
+    display: inline;
+    margin-right: 10px;
+}
+.topbar a:hover {
+    color: #fff;
+}
+</style>
+<![endif]-->
+<meta name="description" content="JavaScript MD5 implementation.">
+</head>
+<body>
+<div class="topbar">
+    <div class="fill">
+        <div class="container">
+            <a class="brand" href="https://github.com/blueimp/JavaScript-MD5">JavaScript MD5</a>
+            <ul class="nav">
+                <li class="active"><a href="#">Demo</a></li>
+                <li><a href="https://github.com/blueimp/JavaScript-MD5/downloads">Downloads</a></li>
+                <li><a href="https://github.com/blueimp/JavaScript-MD5">Source Code</a></li>
+                <li><a href="https://github.com/blueimp/JavaScript-MD5">Documentation</a></li>
+                <li><a href="https://github.com/blueimp/JavaScript-MD5/issues">Issues</a></li>
+                <li><a href="test/">Test</a></li>
+                <li><a href="https://blueimp.net">&copy; Sebastian Tschan</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="page-header">
+        <h1>JavaScript MD5 Demo</h1>
+        <p>JavaScript <a href="http://en.wikipedia.org/wiki/MD5">MD5</a> implementation.<br>
+            Compatible with server-side environments like <a href="http://nodejs.org/">node.js</a>, module loaders like <a href="http://requirejs.org/">RequireJS</a> and all web browsers.</p>
+    </div>
+    <div class="row">
+        <div class="span10">
+            <h2>Input</h2>
+            <textarea class="xxlarge" rows="6" id="input"></textarea>
+        </div>
+        <div class="span6">
+            <h2>Result</h2>
+            <div class="well" id="result"></div>
+            <p>
+                <button class="btn primary" id="calculate">Calculate</button>
+                <button class="btn" type="reset" id="reset">Reset</button>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="md5.min.js"></script>
+<!-- jQuery is not required, but included for the demo -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+/*global jQuery, md5 */
+(function ($) {
+    'use strict';
+    var calculate = function () {
+            $('#result').html(md5($('#input').val()));
+        },
+        init = function () {
+            $('#input').val('日本');
+            $('#result').empty();
+        };
+    init();
+    $('#calculate').on('click', calculate);
+    $('#reset').on('click', init);
+}(jQuery));
+</script>
+</body> 
+</html>
