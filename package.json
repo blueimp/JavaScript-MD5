@@ -38,5 +38,8 @@
     "scripts": {
         "test": "node ./test/test.js"
     },
-    "main": "md5"
+    "files": [
+        "md5.js"
+    ],
+    "main": "md5.js"
 }
