@@ -6,7 +6,7 @@
  * https://blueimp.net
  *
  * Licensed under the MIT license:
- * http://creativecommons.org/licenses/MIT/
+ * http://www.opensource.org/licenses/MIT
  * 
  * Based on
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message

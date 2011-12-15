@@ -81,4 +81,4 @@ var hash = md5("value", "key", true);
 ```
 
 ## License
-The JavaScript MD5 script is released under the [MIT license](http://creativecommons.org/licenses/MIT/).
+The JavaScript MD5 script is released under the [MIT license](http://www.opensource.org/licenses/MIT).
