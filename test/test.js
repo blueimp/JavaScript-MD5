@@ -25,7 +25,7 @@
 
     if (!$.module) {
         // Node.js QUnit compatible Testrunner:
-        nodeQunit = require('./node-qunit');
+        nodeQunit = require('node-qunit');
         $.module = nodeQunit.module;
         $.test = nodeQunit.test;
         $.strictEqual = nodeQunit.assert.strictEqual;
