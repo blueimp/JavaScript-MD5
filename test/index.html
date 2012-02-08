@@ -15,17 +15,20 @@
 <head>
 <meta charset="utf-8">
 <title>JavaScript MD5 Test</title>
-<link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css">
+<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/mocha.min.css">
 </head>
 <body>
-<h1 id="qunit-header">JavaScript MD5 Test</h1>
-<h2 id="qunit-banner"></h2>
-<div id="qunit-testrunner-toolbar"></div>
-<h2 id="qunit-userAgent"></h2>
-<ol id="qunit-tests"></ol>
-<div id="qunit-fixture"></div>
+<div id="mocha"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://blueimp.github.com/cdn/js/mocha.min.js"></script>
+<script src="http://blueimp.github.com/cdn/js/expect.min.js"></script>
+<script>
+mocha.setup('bdd');
+$(function () {
+    mocha.run();
+});
+</script>
 <script src="../md5.js"></script>
-<script src="http://code.jquery.com/qunit/git/qunit.js"></script>
 <script src="test.js"></script>
 </body> 
 </html>

@@ -35,8 +35,12 @@
             "url": "http://www.opensource.org/licenses/MIT"
         }
     ],
+    "devDependencies": {
+        "mocha": "latest",
+        "expect.js": "latest"
+    },
     "scripts": {
-        "test": "node ./test/test.js"
+        "test": "mocha --reporter spec"
     },
     "files": [
         "md5.js"
