@@ -267,8 +267,7 @@
     }
 
     if (typeof define === 'function' && define.amd) {
-        // Register as an AMD module:
-        define('md5', function () {
+        define(function () {
             return md5;
         });
     } else {
