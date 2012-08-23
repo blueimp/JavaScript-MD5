@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/blueimp/JavaScript-MD5.png)](http://travis-ci.org/blueimp/JavaScript-MD5)
 # JavaScript MD5
 
 ## Demo
