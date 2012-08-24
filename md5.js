@@ -255,15 +255,13 @@
         if (!key) {
             if (!raw) {
                 return hex_md5(string);
-            } else {
-                return raw_md5(string);
             }
+            return raw_md5(string);
         }
         if (!raw) {
             return hex_hmac_md5(key, string);
-        } else {
-            return raw_hmac_md5(key, string);
         }
+        return raw_hmac_md5(key, string);
     }
 
     if (typeof define === 'function' && define.amd) {
