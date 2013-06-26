@@ -1,7 +1,10 @@
 # JavaScript MD5
 
 ## Demo
-[JavaScript MD5 Demo](http://blueimp.github.com/JavaScript-MD5/)
+[JavaScript MD5 Demo](http://blueimp.github.io/JavaScript-MD5/)
+
+## Description
+JavaScript MD5 implementation. Compatible with server-side environments like node.js, module loaders like RequireJS and all web browsers.
 
 ## Usage
 
@@ -9,7 +12,7 @@
 Include the (minified) JavaScript [MD5](http://en.wikipedia.org/wiki/MD5) script in your HTML markup:
 
 ```html
-<script src="md5.min.js"></script>
+<script src="js/md5.min.js"></script>
 ```
 
 In your application code, calculate the ([hex](http://en.wikipedia.org/wiki/Hexadecimal)-encoded) [MD5](http://en.wikipedia.org/wiki/MD5) hash of a string by calling the **md5** method with the string as argument:

@@ -1,4 +1,6 @@
-.PHONY: js
+.PHONY: default js
+
+default: js
 
 js:
-	uglifyjs -nc md5.js > md5.min.js
+	node_modules/.bin/uglifyjs js/md5.js -c -m -o js/md5.min.js

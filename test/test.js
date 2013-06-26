@@ -1,5 +1,5 @@
 /*
- * JavaScript MD5 Test 1.0
+ * JavaScript MD5 Test 1.0.1
  * https://github.com/blueimp/JavaScript-MD5
  *
  * Copyright 2011, Sebastian Tschan
@@ -96,5 +96,5 @@
 
 }(
     this.expect || require('expect.js'),
-    this.md5 || require('../md5').md5
+    this.md5 || require('../js/md5').md5
 ));
