@@ -83,5 +83,15 @@ Calculate the raw [HMAC](http://en.wikipedia.org/wiki/HMAC)-MD5 hash of a given 
 var hash = md5("value", "key", true);
 ```
 
+## Tests
+The JavaScript MD5 project comes with [Unit Tests](http://en.wikipedia.org/wiki/Unit_testing).  
+There are two different ways to run the tests:
+
+* Open test/index.html in your browser or
+* run `npm test` in the Terminal in the root path of the repository package.
+
+The first one tests the browser integration, the second one the [node.js](http://nodejs.org/) integration.
+
+
 ## License
 The JavaScript MD5 script is released under the [MIT license](http://www.opensource.org/licenses/MIT).
