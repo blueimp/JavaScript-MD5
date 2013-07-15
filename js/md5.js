@@ -268,6 +268,8 @@
         define(function () {
             return md5;
         });
+    } else if (typeof module === 'object' && module.exports) {
+        module.exports = md5;
     } else {
         $.md5 = md5;
     }
