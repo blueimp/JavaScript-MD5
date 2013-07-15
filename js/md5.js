@@ -7,7 +7,7 @@
  *
  * Licensed under the MIT license:
  * http://www.opensource.org/licenses/MIT
- * 
+ *
  * Based on
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
  * Digest Algorithm, as defined in RFC 1321.
@@ -251,17 +251,25 @@
         return rstr2hex(raw_hmac_md5(k, d));
     }
 
-    function md5(string, key, raw) {
+    function md5(data, key, raw) {
+        if (typeof data === 'object') {
+            data = JSON.stringify(data);
+        }
+
+        if (typeof data === 'function') {
+            data = data.toString();
+        }
+
         if (!key) {
             if (!raw) {
-                return hex_md5(string);
+                return hex_md5(data);
             }
-            return raw_md5(string);
+            return raw_md5(data);
         }
         if (!raw) {
-            return hex_hmac_md5(key, string);
+            return hex_hmac_md5(key, data);
         }
-        return raw_hmac_md5(key, string);
+        return raw_hmac_md5(key, data);
     }
 
     if (typeof define === 'function' && define.amd) {
