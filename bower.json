@@ -1,6 +1,6 @@
 {
     "name": "blueimp-md5",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "title": "JavaScript MD5",
     "description": "JavaScript MD5 implementation.",
     "keywords": [
@@ -39,9 +39,6 @@
         "mocha": "1.11.0",
         "expect.js": "0.2.0",
         "uglify-js": "2.3.6"
-    },
-    "scripts": {
-        "test": "mocha --reporter spec"
     },
     "main": "js/md5.js"
 }
