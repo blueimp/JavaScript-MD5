@@ -47,5 +47,8 @@
   "scripts": {
     "test": "grunt test"
   },
-  "main": "js/md5.js"
+  "main": "js/md5.js",
+  "spm": {
+    "main": "js/md5.js"
+  }
 }
