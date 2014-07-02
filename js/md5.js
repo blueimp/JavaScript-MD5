@@ -1,5 +1,5 @@
 /*
- * JavaScript MD5 1.0.1
+ * JavaScript MD5 1.1.0
  * https://github.com/blueimp/JavaScript-MD5
  *
  * Copyright 2011, Sebastian Tschan
