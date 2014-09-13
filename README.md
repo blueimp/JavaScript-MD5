@@ -1,7 +1,7 @@
 # JavaScript MD5
 
 ## Demo
-[JavaScript MD5 Demo](http://blueimp.github.io/JavaScript-MD5/)
+[JavaScript MD5 Demo](https://blueimp.github.io/JavaScript-MD5/)
 
 ## Description
 JavaScript MD5 implementation. Compatible with server-side environments like node.js, module loaders like RequireJS and all web browsers.
@@ -9,13 +9,13 @@ JavaScript MD5 implementation. Compatible with server-side environments like nod
 ## Usage
 
 ### Client-side
-Include the (minified) JavaScript [MD5](http://en.wikipedia.org/wiki/MD5) script in your HTML markup:
+Include the (minified) JavaScript [MD5](https://en.wikipedia.org/wiki/MD5) script in your HTML markup:
 
 ```html
 <script src="js/md5.min.js"></script>
 ```
 
-In your application code, calculate the ([hex](http://en.wikipedia.org/wiki/Hexadecimal)-encoded) [MD5](http://en.wikipedia.org/wiki/MD5) hash of a string by calling the **md5** method with the string as argument:
+In your application code, calculate the ([hex](https://en.wikipedia.org/wiki/Hexadecimal)-encoded) [MD5](https://en.wikipedia.org/wiki/MD5) hash of a string by calling the **md5** method with the string as argument:
 
 ```js
 var hash = md5("value"); // "2063c1608d6e0baf80249c42e2be5804"
@@ -25,7 +25,7 @@ var hash = md5("value"); // "2063c1608d6e0baf80249c42e2be5804"
 
 The following is an example how to use the JavaScript MD5 module on the server-side with [node.js](http://nodejs.org/).
 
-Create a new directory and add the **md5.js** file. Or alternatively, install the **blueimp-md5** package with [npm](http://npmjs.org/):
+Create a new directory and add the **md5.js** file. Or alternatively, install the **blueimp-md5** package with [npm](https://www.npmjs.org/):
 
 ```sh
 npm install blueimp-md5
@@ -59,32 +59,32 @@ The JavaScript MD5 script has zero dependencies.
 
 ## API
 
-Calculate the ([hex](http://en.wikipedia.org/wiki/Hexadecimal)-encoded) [MD5](http://en.wikipedia.org/wiki/MD5) hash of a given string value:
+Calculate the ([hex](https://en.wikipedia.org/wiki/Hexadecimal)-encoded) [MD5](https://en.wikipedia.org/wiki/MD5) hash of a given string value:
 
 ```js
 var hash = md5("value"); // "2063c1608d6e0baf80249c42e2be5804"
 ```
 
-Calculate the ([hex](http://en.wikipedia.org/wiki/Hexadecimal)-encoded) [HMAC](http://en.wikipedia.org/wiki/HMAC)-MD5 hash of a given string value and key:
+Calculate the ([hex](https://en.wikipedia.org/wiki/Hexadecimal)-encoded) [HMAC](https://en.wikipedia.org/wiki/HMAC)-MD5 hash of a given string value and key:
 
 ```js
 var hash = md5("value", "key"); // "01433efd5f16327ea4b31144572c67f6"
 ```
     
-Calculate the raw [MD5](http://en.wikipedia.org/wiki/MD5) hash of a given string value:
+Calculate the raw [MD5](https://en.wikipedia.org/wiki/MD5) hash of a given string value:
 
 ```js
 var hash = md5("value", null, true);
 ```
 
-Calculate the raw [HMAC](http://en.wikipedia.org/wiki/HMAC)-MD5 hash of a given string value and key:
+Calculate the raw [HMAC](https://en.wikipedia.org/wiki/HMAC)-MD5 hash of a given string value and key:
 
 ```js
 var hash = md5("value", "key", true);
 ```
 
 ## Tests
-The JavaScript MD5 project comes with [Unit Tests](http://en.wikipedia.org/wiki/Unit_testing).  
+The JavaScript MD5 project comes with [Unit Tests](https://en.wikipedia.org/wiki/Unit_testing).  
 There are two different ways to run the tests:
 
 * Open test/index.html in your browser or
