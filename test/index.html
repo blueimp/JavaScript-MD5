@@ -19,22 +19,20 @@
 <meta charset="utf-8">
 <title>JavaScript MD5 Test</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://blueimp.github.io/cdn/css/mocha.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.2.5/mocha.min.css">
 </head>
 <body>
 <div id="mocha"></div>
-<script src="https://blueimp.github.io/cdn/js/mocha.min.js"></script>
-<script src="https://blueimp.github.io/cdn/js/expect.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.2.5/mocha.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/expect.js/0.2.0/expect.min.js"></script>
 <script>
 mocha.setup('bdd');
 </script>
 <script src="../js/md5.js"></script>
 <script src="test.js"></script>
 <script>
-if (!window.PHANTOMJS) {
-	mocha.checkLeaks();
-	mocha.run();
-}
+mocha.checkLeaks();
+mocha.run();
 </script>
-</body> 
+</body>
 </html>

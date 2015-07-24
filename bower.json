@@ -1,6 +1,6 @@
 {
   "name": "blueimp-md5",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "title": "JavaScript MD5",
   "description": "JavaScript MD5 implementation.",
   "keywords": [
@@ -29,12 +29,7 @@
     "url": "git://github.com/blueimp/JavaScript-MD5.git"
   },
   "bugs": "https://github.com/blueimp/JavaScript-MD5/issues",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/MIT"
-    }
-  ],
+  "license": "MIT",
   "main": "js/md5.js",
   "ignore": [
     "/*.*",
