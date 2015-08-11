@@ -21,6 +21,21 @@ function unichr (code){
 function ord(char){
     return char.charCodeAt(0);
 }
+function repr(s) {
+    var bytes = s.bytes();
+    var hex_codes = [];
+    var is_unicode = bytes.every(function (byte, i){
+        console.log( byte );
+        var hex_code = byte.toString(16);
+        hex_codes.push( hex_code );
+        return hex_code == parseInt(hex_code).toString();
+    });
+    if ( is_unicode == true ) {
+        return hex_codes.join("\\u");
+    } else {
+        return hex_codes.join("\\x");
+    }
+}
 
 // Like Rust.
 String.prototype.to_utf8 = function (){
