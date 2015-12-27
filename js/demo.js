@@ -9,15 +9,19 @@
  * http://www.opensource.org/licenses/MIT
  */
 
-/*global window, $ */
+/*global document, md5 */
 
-$(function () {
+(function () {
     'use strict';
 
-    $('#calculate').on('click', function (event) {
-        event.preventDefault();
-        $('#result').val(window.md5($('#input').val()));
-    });
-    $('#input').val('日本');
+    var input = document.getElementById('input');
+    document.getElementById('calculate').addEventListener(
+        'click',
+        function (event) {
+            event.preventDefault();
+            document.getElementById('result').value = md5(input.value);
+        }
+    );
+    input.value = '日本';
 
-});
+}());
