@@ -31,7 +31,7 @@
   },
   "scripts": {
     "test": "jshint js test && mocha",
-    "build": "uglifyjs js/md5.js -c -m > js/md5.min.js",
+    "build": "cd js && uglifyjs md5.js -c -m -o md5.min.js --source-map md5.min.js.map",
     "preversion": "npm test",
     "version": "npm run build && git add -A js",
     "postversion": "git push --tags origin master master:gh-pages && npm publish"
