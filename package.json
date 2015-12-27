@@ -34,7 +34,7 @@
     "build": "uglifyjs js/md5.js -c -m > js/md5.min.js",
     "preversion": "npm test",
     "version": "npm run build && git add -A js",
-    "postversion": "git push origin master --tags && npm publish"
+    "postversion": "git push --tags origin master master:gh-pages && npm publish"
   },
   "main": "js/md5.js",
   "jshintConfig": {
