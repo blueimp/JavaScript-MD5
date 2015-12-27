@@ -1,5 +1,5 @@
 /*
- * JavaScript MD5 Demo JS 1.0.1
+ * JavaScript MD5 Demo JS
  * https://github.com/blueimp/JavaScript-MD5
  *
  * Copyright 2013, Sebastian Tschan

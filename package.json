@@ -31,15 +31,35 @@
   "bugs": "https://github.com/blueimp/JavaScript-MD5/issues",
   "license": "MIT",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-uglify": "~0.2.7",
-    "grunt-contrib-jshint": "~0.7.1",
-    "grunt-bump-build-git": "~1.0.0",
-    "grunt-simple-mocha": "~0.4.0",
-    "expect.js": "0.2.0"
+    "expect.js": "0.3.1",
+    "jshint": "2.8.0",
+    "mocha": "2.3.4",
+    "uglify-js": "2.6.1"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "jshint js test && mocha",
+    "build": "uglifyjs js/md5.js -c -m > js/md5.min.js",
+    "preversion": "npm test",
+    "version": "npm run build && git add -A js",
+    "postversion": "git push origin master --tags && npm publish"
   },
-  "main": "js/md5.js"
+  "main": "js/md5.js",
+  "jshintConfig": {
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "freeze": true,
+    "immed": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "noempty": true,
+    "nonbsp": true,
+    "nonew": true,
+    "quotmark": true,
+    "undef": true,
+    "unused": true,
+    "strict": true
+  }
 }

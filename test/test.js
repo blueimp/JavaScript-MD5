@@ -1,5 +1,5 @@
 /*
- * JavaScript MD5 Test 1.0.1
+ * JavaScript MD5 Test
  * https://github.com/blueimp/JavaScript-MD5
  *
  * Copyright 2011, Sebastian Tschan
@@ -9,7 +9,7 @@
  * http://www.opensource.org/licenses/MIT
  */
 
-/*global describe, it, expect, require */
+/*global describe, it, require */
 
 (function (expect, md5) {
     'use strict';
