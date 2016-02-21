@@ -25,34 +25,16 @@
   "license": "MIT",
   "devDependencies": {
     "expect.js": "0.3.1",
-    "jshint": "2.8.0",
     "mocha": "2.3.4",
+    "standard": "6.0.7",
     "uglify-js": "2.6.1"
   },
   "scripts": {
-    "test": "jshint js test && mocha",
+    "test": "standard js/*.js test/*.js && mocha",
     "build": "cd js && uglifyjs md5.js -c -m -o md5.min.js --source-map md5.min.js.map",
     "preversion": "npm test",
     "version": "npm run build && git add -A js",
     "postversion": "git push --tags origin master master:gh-pages && npm publish"
   },
-  "main": "js/md5.js",
-  "jshintConfig": {
-    "bitwise": true,
-    "curly": true,
-    "eqeqeq": true,
-    "forin": true,
-    "freeze": true,
-    "immed": true,
-    "latedef": true,
-    "newcap": true,
-    "noarg": true,
-    "noempty": true,
-    "nonbsp": true,
-    "nonew": true,
-    "quotmark": true,
-    "undef": true,
-    "unused": true,
-    "strict": true
-  }
+  "main": "js/md5.js"
 }
