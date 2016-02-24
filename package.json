@@ -1,6 +1,6 @@
 {
   "name": "blueimp-md5",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "title": "JavaScript MD5",
   "description": "JavaScript MD5 implementation. Compatible with server-side environments like Node.js, module loaders like RequireJS, Browserify or webpack and all web browsers.",
   "keywords": [
