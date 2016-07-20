@@ -1,0 +1,28 @@
+{
+  "name": "JavaScript-MD5",
+  "description": "JavaScript MD5 implementation. Compatible with server-side environments like Node.js, module loaders like RequireJS, Browserify or webpack and all web browsers.",
+  "main": "js/md5.js",
+  "authors": [
+    "Sebastian Tschan"
+  ],
+  "contributors": [
+    "Sarfaraz Ansari <sarfaraz_designer@live.in>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "javascript",
+    "md5"
+  ],
+  "homepage": "https://github.com/blueimp/JavaScript-MD5",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_source": "https://github.com/blueimp/JavaScript-MD5",
+  "_target": "*",
+  "_originalSource": "https://github.com/blueimp/JavaScript-MD5",
+  "_direct": true
+}
