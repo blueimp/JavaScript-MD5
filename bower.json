@@ -13,7 +13,7 @@
     "javascript",
     "md5"
   ],
-  "homepage": "https://github.com/blueimp/JavaScript-MD5",
+  "homepage": "https://github.com/sarfarazansari/JavaScript-MD5",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -21,8 +21,8 @@
     "test",
     "tests"
   ],
-  "_source": "https://github.com/blueimp/JavaScript-MD5",
+  "_source": "https://github.com/sarfarazansari/JavaScript-MD5",
   "_target": "*",
-  "_originalSource": "https://github.com/blueimp/JavaScript-MD5",
+  "_originalSource": "https://github.com/sarfarazansari/JavaScript-MD5",
   "_direct": true
 }
