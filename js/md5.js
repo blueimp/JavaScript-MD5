@@ -164,7 +164,8 @@
   function binl2rstr (input) {
     var i
     var output = ''
-    for (i = 0; i < input.length * 32; i += 8) {
+    var length32 = input.length * 32
+    for (i = 0; i < length32; i += 8) {
       output += String.fromCharCode((input[i >> 5] >>> (i % 32)) & 0xFF)
     }
     return output
@@ -181,7 +182,8 @@
     for (i = 0; i < output.length; i += 1) {
       output[i] = 0
     }
-    for (i = 0; i < input.length * 8; i += 8) {
+    var length8 = input.length * 8
+    for (i = 0; i < length8; i += 8) {
       output[i >> 5] |= (input.charCodeAt(i / 8) & 0xFF) << (i % 32)
     }
     return output
