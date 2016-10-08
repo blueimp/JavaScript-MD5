@@ -24,13 +24,15 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "expect.js": "0.3.1",
-    "mocha": "2.3.4",
-    "standard": "6.0.7",
-    "uglify-js": "2.6.1"
+    "chai": "3.5.0",
+    "mocha": "3.1.0",
+    "standard": "8.3.0",
+    "uglify-js": "2.7.3"
   },
   "scripts": {
-    "test": "standard js/*.js test/*.js && mocha",
+    "lint": "standard js/*.js test/*.js",
+    "unit": "mocha",
+    "test": "npm run lint && npm run unit",
     "build": "cd js && uglifyjs md5.js -c -m -o md5.min.js --source-map md5.min.js.map",
     "preversion": "npm test",
     "version": "npm run build && git add -A js",

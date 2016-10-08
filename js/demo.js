@@ -9,7 +9,7 @@
  * http://www.opensource.org/licenses/MIT
  */
 
-/*global document, md5 */
+/* global md5 */
 
 ;(function () {
   'use strict'
