@@ -1,2 +1,3 @@
 *
-!js/md5.js
+!js/*.js
+!js/*.js.map
