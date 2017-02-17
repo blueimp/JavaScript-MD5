@@ -110,4 +110,4 @@ The first one tests the browser integration, the second one the
 
 ## License
 The JavaScript MD5 script is released under the
-[MIT license](http://www.opensource.org/licenses/MIT).
+[MIT license](https://opensource.org/licenses/MIT).
