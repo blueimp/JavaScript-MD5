@@ -38,5 +38,8 @@
     "version": "npm run build && git add -A js",
     "postversion": "git push --tags origin master master:gh-pages && npm publish"
   },
-  "main": "js/md5.js"
+  "main": "js/md5.js",
+  "spm": {
+    "main": "js/md5.js"
+  }
 }
