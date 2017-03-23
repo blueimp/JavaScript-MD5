@@ -237,7 +237,7 @@
   * Encode a string as utf-8
   */
   function str2rstrUTF8 (input) {
-    return unescape(encodeURIComponent(input))
+    return decodeURIComponent(encodeURIComponent(input))
   }
 
   /*
