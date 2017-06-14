@@ -87,5 +87,5 @@
   })
 }(
   (this.chai || require('chai')).expect,
-  this.md5 || require('../js/md5')
+  this.md5 || require('../dist/es6/md5')
 ))
