@@ -15,7 +15,7 @@ Include the (minified) JavaScript [MD5](https://en.wikipedia.org/wiki/MD5)
 script in your HTML markup:
 
 ```html
-<script src="js/md5.min.js"></script>
+<script src="dist/md5.min.js"></script>
 ```
 
 In your application code, calculate the
