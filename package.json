@@ -32,9 +32,11 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^3.5.0",
+    "prettier-eslint-cli": "^4.2.1",
     "uglify-js": "^3.0.28"
   },
   "scripts": {
+    "format": "prettier-eslint --no-semi --single-quote --write **/*.js",
     "lint": "eslint .",
     "unit": "mocha",
     "test": "npm run lint && npm run unit",

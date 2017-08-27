@@ -27,9 +27,9 @@
   * to work around bugs in some JS interpreters.
   */
   function safeAdd (x, y) {
-    var lsw = (x & 0xFFFF) + (y & 0xFFFF)
+    var lsw = (x & 0xffff) + (y & 0xffff)
     var msw = (x >> 16) + (y >> 16) + (lsw >> 16)
-    return (msw << 16) | (lsw & 0xFFFF)
+    return (msw << 16) | (lsw & 0xffff)
   }
 
   /*
@@ -46,16 +46,16 @@
     return safeAdd(bitRotateLeft(safeAdd(safeAdd(a, q), safeAdd(x, t)), s), b)
   }
   function md5ff (a, b, c, d, x, s, t) {
-    return md5cmn((b & c) | ((~b) & d), a, b, x, s, t)
+    return md5cmn((b & c) | (~b & d), a, b, x, s, t)
   }
   function md5gg (a, b, c, d, x, s, t) {
-    return md5cmn((b & d) | (c & (~d)), a, b, x, s, t)
+    return md5cmn((b & d) | (c & ~d), a, b, x, s, t)
   }
   function md5hh (a, b, c, d, x, s, t) {
     return md5cmn(b ^ c ^ d, a, b, x, s, t)
   }
   function md5ii (a, b, c, d, x, s, t) {
-    return md5cmn(c ^ (b | (~d)), a, b, x, s, t)
+    return md5cmn(c ^ (b | ~d), a, b, x, s, t)
   }
 
   /*
@@ -64,7 +64,7 @@
   function binlMD5 (x, len) {
     /* append padding */
     x[len >> 5] |= 0x80 << (len % 32)
-    x[(((len + 64) >>> 9) << 4) + 14] = len
+    x[((len + 64) >>> 9 << 4) + 14] = len
 
     var i
     var olda
@@ -166,7 +166,7 @@
     var output = ''
     var length32 = input.length * 32
     for (i = 0; i < length32; i += 8) {
-      output += String.fromCharCode((input[i >> 5] >>> (i % 32)) & 0xFF)
+      output += String.fromCharCode((input[i >> 5] >>> (i % 32)) & 0xff)
     }
     return output
   }
@@ -184,7 +184,7 @@
     }
     var length8 = input.length * 8
     for (i = 0; i < length8; i += 8) {
-      output[i >> 5] |= (input.charCodeAt(i / 8) & 0xFF) << (i % 32)
+      output[i >> 5] |= (input.charCodeAt(i / 8) & 0xff) << (i % 32)
     }
     return output
   }
@@ -211,7 +211,7 @@
     }
     for (i = 0; i < 16; i += 1) {
       ipad[i] = bkey[i] ^ 0x36363636
-      opad[i] = bkey[i] ^ 0x5C5C5C5C
+      opad[i] = bkey[i] ^ 0x5c5c5c5c
     }
     hash = binlMD5(ipad.concat(rstr2binl(data)), 512 + data.length * 8)
     return binl2rstr(binlMD5(opad.concat(hash), 512 + 128))
@@ -227,8 +227,7 @@
     var i
     for (i = 0; i < input.length; i += 1) {
       x = input.charCodeAt(i)
-      output += hexTab.charAt((x >>> 4) & 0x0F) +
-      hexTab.charAt(x & 0x0F)
+      output += hexTab.charAt((x >>> 4) & 0x0f) + hexTab.charAt(x & 0x0f)
     }
     return output
   }
@@ -278,4 +277,4 @@
   } else {
     $.md5 = md5
   }
-}(this))
+})(this)
