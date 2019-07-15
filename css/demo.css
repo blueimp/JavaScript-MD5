@@ -19,7 +19,7 @@ body {
   background: #222;
   color: #fff;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 a {
   color: orange;
@@ -37,8 +37,8 @@ input {
   display: inline-block;
   width: 100%;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 10px;
   margin: 0 0 10px;
 }
@@ -57,7 +57,7 @@ input {
 }
 
 /* IE7 fixes */
-*+html textarea,
-*+html input {
+* + html textarea,
+* + html input {
   width: 460px;
 }
