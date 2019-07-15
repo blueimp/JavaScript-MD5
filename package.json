@@ -24,19 +24,37 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "chai": "^4.1.1",
-    "eslint": "^4.5.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "mocha": "^3.5.0",
-    "prettier-eslint-cli": "^4.2.1",
-    "uglify-js": "^3.0.28"
+    "chai": "4",
+    "eslint": "6",
+    "eslint-config-blueimp": "1",
+    "eslint-config-prettier": "6",
+    "eslint-plugin-jsdoc": "15",
+    "eslint-plugin-prettier": "3",
+    "mocha": "6",
+    "prettier": "1",
+    "uglify-js": "3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "blueimp",
+      "plugin:jsdoc/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "eslintIgnore": [
+    "js/*.min.js",
+    "test/vendor"
+  ],
+  "prettier": {
+    "proseWrap": "always",
+    "semi": false,
+    "singleQuote": true
   },
   "scripts": {
-    "format": "prettier-eslint --no-semi --single-quote --write **/*.js",
     "lint": "eslint .",
     "unit": "mocha",
     "test": "npm run lint && npm run unit",
@@ -45,5 +63,9 @@
     "version": "npm run build && git add -A js",
     "postversion": "git push --tags origin master master:gh-pages && npm publish"
   },
+  "files": [
+    "js/*.js",
+    "js/*.js.map"
+  ],
   "main": "js/md5.js"
 }

@@ -11,16 +11,17 @@
 
 /* global md5 */
 
-;(function () {
+/* eslint-disable strict */
+
+;(function() {
   'use strict'
 
   var input = document.getElementById('input')
-  document.getElementById('calculate').addEventListener(
-    'click',
-    function (event) {
+  document
+    .getElementById('calculate')
+    .addEventListener('click', function(event) {
       event.preventDefault()
       document.getElementById('result').value = md5(input.value)
-    }
-  )
+    })
   input.value = '日本'
-}())
+})()
