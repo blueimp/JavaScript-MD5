@@ -374,7 +374,7 @@
    *
    * @param {string} string Input string
    * @param {string} [key] HMAC key
-   * @param {boolean} raw Raw oytput switch
+   * @param {boolean} [raw] Raw output switch
    * @returns {string} MD5 output
    */
   function md5(string, key, raw) {
