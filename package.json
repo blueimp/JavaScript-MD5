@@ -31,7 +31,7 @@
     "eslint-plugin-jsdoc": "22",
     "eslint-plugin-prettier": "3",
     "mocha": "7",
-    "prettier": "1",
+    "prettier": "2",
     "uglify-js": "3"
   },
   "eslintConfig": {
@@ -50,9 +50,11 @@
     "test/vendor"
   ],
   "prettier": {
+    "arrowParens": "avoid",
     "proseWrap": "always",
     "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "trailingComma": "none"
   },
   "scripts": {
     "lint": "eslint .",
