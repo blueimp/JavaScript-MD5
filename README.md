@@ -2,7 +2,7 @@
 
 ## Contents
 
-- [Demo](#demo)
+- [Demo](https://blueimp.github.io/JavaScript-MD5/)
 - [Description](#description)
 - [Usage](#usage)
   - [Client-side](#client-side)
@@ -12,19 +12,22 @@
 - [Tests](#tests)
 - [License](#license)
 
-## Demo
-
-[JavaScript MD5 Demo](https://blueimp.github.io/JavaScript-MD5/)
-
 ## Description
 
-JavaScript MD5 implementation. Compatible with server-side environments like
-Node.js, module loaders like RequireJS, Browserify or webpack and all web
-browsers.
+JavaScript [MD5](https://en.wikipedia.org/wiki/MD5) implementation.  
+Compatible with server-side environments like [Node.js](https://nodejs.org/),
+module loaders like [RequireJS](https://requirejs.org/) or
+[webpack](https://webpack.js.org/) and all web browsers.
 
 ## Usage
 
 ### Client-side
+
+Install the **blueimp-md5** package with [NPM](https://www.npmjs.org/):
+
+```sh
+npm install blueimp-md5
+```
 
 Include the (minified) JavaScript [MD5](https://en.wikipedia.org/wiki/MD5)
 script in your HTML markup:
@@ -45,10 +48,9 @@ var hash = md5('value') // "2063c1608d6e0baf80249c42e2be5804"
 ### Server-side
 
 The following is an example how to use the JavaScript MD5 module on the
-server-side with [Node.js](http://nodejs.org/).
+server-side with [Node.js](https://nodejs.org/).
 
-Create a new directory and add the **md5.js** file. Or alternatively, install
-the **blueimp-md5** package with [npm](https://www.npmjs.org/):
+Install the **blueimp-md5** package with [NPM](https://www.npmjs.org/):
 
 ```sh
 npm install blueimp-md5
@@ -58,7 +60,7 @@ Add a file **server.js** with the following content:
 
 ```js
 require('http')
-  .createServer(function(req, res) {
+  .createServer(function (req, res) {
     // The md5 module exports the md5() function:
     var md5 = require('./md5'),
       // Use the following version if you installed the package with npm:
@@ -124,7 +126,7 @@ There are two different ways to run the tests:
 - run `npm test` in the Terminal in the root path of the repository package.
 
 The first one tests the browser integration, the second one the
-[node.js](http://nodejs.org/) integration.
+[Node.js](https://nodejs.org/) integration.
 
 ## License
 
