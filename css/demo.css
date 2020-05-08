@@ -13,8 +13,8 @@ body {
   max-width: 750px;
   margin: 0 auto;
   padding: 1em;
-  font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-    sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
   line-height: 1.4;
   background: #212121;
   color: #dedede;
@@ -87,6 +87,7 @@ textarea {
 }
 input[type='file'] {
   padding: inherit;
+  max-width: 100%;
 }
 
 @media (prefers-color-scheme: light) {
