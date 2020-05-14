@@ -53,17 +53,26 @@
       <li><a href="test/">Test</a></li>
       <li><a href="https://blueimp.net">&copy; Sebastian Tschan</a></li>
     </ul>
-    <form>
-      <h2>Input</h2>
-      <textarea rows="6" id="input"></textarea>
-      <br />
-      <button type="submit" id="calculate">Calculate</button>
-      <button type="reset" id="reset">Reset</button>
-      <h2>Result</h2>
-      <input id="result" />
-      <br />
-    </form>
     <script src="js/md5.js"></script>
-    <script src="js/demo/demo.js"></script>
+    <form>
+      <p>
+        <label for="input">Input</label>
+        <textarea rows="6" id="input"></textarea>
+      </p>
+      <p>
+        <button
+          type="submit"
+          id="calculate"
+          onclick="result.value=md5(input.value);return false"
+        >
+          Calculate
+        </button>
+        <button type="reset" id="reset">Reset</button>
+      </p>
+      <p>
+        <label for="result">Result</label>
+        <input id="result" readonly />
+      </p>
+    </form>
   </body>
 </html>
