@@ -60,6 +60,7 @@
     "lint": "eslint .",
     "unit": "mocha",
     "test": "npm run lint && npm run unit",
+    "prebuild": "bin/sync-vendor-libs.sh",
     "build": "cd js && uglifyjs md5.js -c -m -o md5.min.js --source-map url=md5.min.js.map",
     "preversion": "npm test",
     "version": "npm run build && git add -A js",
